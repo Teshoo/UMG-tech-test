@@ -16,7 +16,27 @@ services:
       # - ./docker/db/data:/var/lib/postgresql/data:rw
 ###< doctrine/doctrine-bundle ###
 
+###> LDAP server ###
+  openldap:
+    image: bitnami/openldap:latest
+    # ports:
+    #   - '1389:1389'
+    #   - '1636:1636'
+    environment:
+      - LDAP_ADMIN_USERNAME=admin
+      - LDAP_ADMIN_PASSWORD=adminpassword
+      - LDAP_USERS=user01,user02
+      - LDAP_PASSWORDS=password1,password2
+    # networks:
+    #   - my-network
+    volumes:
+      - 'openldap_data:/bitnami/openldap'
+###< LDAP server ###
+
 volumes:
 ###> doctrine/doctrine-bundle ###
   database_data:
 ###< doctrine/doctrine-bundle ###
+###> LDAP server ###
+  openldap_data:
+###< LDAP server ###

@@ -6,3 +6,10 @@ services:
     ports:
       - "3306"
 ###< doctrine/doctrine-bundle ###
+
+###> LDAP server ###
+  openldap:
+    ports:
+      - '1389'
+      - '1636'
+###< LDAP server ###
