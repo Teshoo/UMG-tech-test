@@ -1,5 +1,5 @@
 # UMG-tech-test
-Technical test consisting of different user authentification through Symfony:
+Technical test consisting of different user authentication through Symfony:
 - Basic authentication;
 - Ldap authentication.
 
