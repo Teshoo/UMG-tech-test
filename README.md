@@ -43,7 +43,6 @@ Build (and run) the MySQL and Ldap servers
 
 Setup the database
 ```bash
-  symfony console make:migrations
   symfony console doctrine:migrations:migrate
   symfony console doctrine:fixtures:load
 ```
